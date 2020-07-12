@@ -120,8 +120,10 @@ When sending request, the client can send data with using different http methods
 
 ```python
 # Import Flask modules
-
+from flask import Flask, render_template, request
+from flask_sqlalchemy import SQLAlchemy
 # Create an object named app
+app = Flask(__name__)
 
 # Configure sqlite database
 
@@ -137,9 +139,7 @@ When sending request, the client can send data with using different http methods
     # if there is no same user name in the db, then insert the new one
     # if there is user with same name, then give warning
 
-# Write a function named `emails` which finds email addresses by keyword using `GET` and `POST` methods,
-# using template files named `emails.html` given under `templates` folder
-# and assign to the static route of ('/')
+
 
 # Write a function named `add_email` which inserts new email to the database using `GET` and `POST` methods,
 # using template files named `add-email.html` given under `templates` folder
